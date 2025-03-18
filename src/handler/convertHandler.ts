@@ -21,7 +21,6 @@ export default function convertWordToPDF(fileName: string): Promise<Buffer> {
       }
 
       fs.readFile(outputFullPath, (err, data) => {
-        console.log(outputFullPath)
         if (err) {
           console.log("❌ Error reading PDF:", err)
           reject('conversion failed');
